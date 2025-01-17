@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Page Administrateur</title>
+</head>
+<body>
+    <h1>Bienvenue sur la page Administrateur</h1>
+    <p>Utilisateur : <span th:text="${nomUtilisateur}"></span></p>
+    <p>Rôle : <span th:text="${role}"></span></p>
+    <a href="/admin/ajouter-etudiant" class="btn btn-primary">Ajouter Enseignant ou Etudiant</a>
+        <a href="/ajouter-document" class="btn btn-primary">->Document</a>
+        <a href="/addDeadline" class="btn btn-primary">ajouter deadline</a>
+        <a href="/deadlineadmin" class="btn btn-primary">Deadlines</a>
+
+<h1>Liste des Documents Administrateur</h1>
+<ul>
+    <li th:each="document : ${documents}">
+        <a th:href="@{/download/{id}(id=${document.id})}" th:text="${document.titre}"></a>
+    </li>
+</ul>
+
+</body>
+</html>

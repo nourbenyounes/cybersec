@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Page Étudiant</title>
+</head>
+<body>
+    <h1>Bienvenue sur la page Étudiant</h1>
+    <p>Utilisateur : <span th:text="${nomUtilisateur}"></span></p>
+    <p>Rôle : <span th:text="${role}"></span></p>
+            <a href="/ajouter-document-etudiant" class="btn btn-primary">->Document</a>
+        <a href="/liste-document" class="btn btn-primary">Ressources</a>
+        <a href="/notifications" class="btn btn-primary">Notifications</a>
+        <a href="/modifier-etudiant" class="btn btn-primary">Modifier mes informations</a>
+        <a href="/deadline" class="btn btn-primary">Deadlines</a>
+
+
+</body>
+</html>

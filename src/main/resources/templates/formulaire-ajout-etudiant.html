@@ -1,0 +1,36 @@
+<!-- formulaire-ajout-etudiant.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajouter</title>
+</head>
+<body>
+    <h2>Ajouter un étudiant</h2>
+    <form th:action="@{/admin/ajouter-etudiant}"  method="post">
+		<label>CIN: <input type="text" id="cin" name="cin"></label><br>
+
+        <label>Nom: <input type="text" id="nom" name="nom"></label><br>
+        <label>Prénom: <input type="text" id="prenom" name="prenom"></label><br>
+        <label>email: <input type="text" id="email" name="email"></label><br>
+        <label>Mot de passe : <input type="password"id="password" name="password"></label><br>
+      		<label>Spécialité: <input type="text" id="specialite" name="specialite"></label><br>
+
+    
+        <button type="submit">Ajouter etudiant</button>
+    </form>
+        <h2>Ajouter un enseignant</h2>
+    <form th:action="@{/admin/ajouter-enseignant}"  method="post">
+		<label>CIN: <input type="text" id="cin" name="cin"></label><br>
+
+        <label>Nom: <input type="text" id="nom" name="nom"></label><br>
+        <label>Prénom: <input type="text" id="prenom" name="prenom"></label><br>
+        <label>email: <input type="text" id="email" name="email"></label><br>
+        <label>Mot de passe : <input type="password"id="password" name="password"></label><br>
+   		<label>Spécialité: <input type="text" id="specialite" name="specialite"></label><br>
+
+    
+        <button type="submit">Ajouter enseignant</button>
+    </form>
+</body>
+</html>

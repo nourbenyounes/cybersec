@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modification d'étudiant</title>
+</head>
+<body>
+    <h1>Modification d'étudiant</h1>
+    <form action="/modifier-etudiant" method="post">
+        <input type="hidden" name="_csrf" th:value="${_csrf.token}" />
+        <label for="stage">Stage:</label><br>
+        <input type="text" id="stage" name="stage" value="${etudiant.stage}"><br>
+        
+        <label for="dateDebut">Date de début:</label><br>
+        <input type="date" id="dateDebut" name="dateDebut" value="${etudiant.dateDebut}"><br>
+        
+        <label for="dateFin">Date de fin:</label><br>
+        <input type="date" id="dateFin" name="dateFin" value="${etudiant.dateFin}"><br>
+        
+        <label for="entreprise">Entreprise:</label><br>
+        <input type="text" id="entreprise" name="entreprise" value="${etudiant.entreprise}"><br>
+        
+        <label for="specialite">Spécialité:</label><br>
+        <input type="text" id="specialite" name="specialite" value="${etudiant.specialite}"><br>
+        
+        <input type="submit" value="Enregistrer les modifications">
+    </form>
+</body>
+</html>

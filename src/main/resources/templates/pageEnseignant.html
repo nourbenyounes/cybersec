@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Page Enseignant</title>
+</head>
+<body>
+    <h1>Bienvenue sur la page Enseignant</h1>
+    <p>Utilisateur : <span th:text="${nomUtilisateur}"></span></p>
+    <p>Rôle : <span th:text="${role}"></span></p></body>
+            <a href="/ajouter-document" class="btn btn-primary">->Document</a>
+        <a href="/liste-document" class="btn btn-primary">Documents</a>
+        <a href="/deadline" class="btn btn-primary">Deadlines</a>
+</html>
