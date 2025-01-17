@@ -126,6 +126,18 @@
     <artifactId>sonar-maven-plugin</artifactId>
     <version>6.2.1.4610</version>
 </plugin>
+			        <plugin>
+            <groupId>org.owasp</groupId>
+            <artifactId>dependency-check-maven</artifactId>
+            <version>6.4.0</version>  <!-- Utilise la dernière version stable -->
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>check</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
 
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
