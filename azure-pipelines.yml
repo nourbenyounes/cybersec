@@ -1,0 +1,23 @@
+- stage: BuildAndTest
+  displayName: Build and Test Spring Boot Application
+  jobs:
+  - job: BuildAndTest
+    displayName: Build and Test Spring Boot Application
+    steps:
+    - task: JavaToolInstaller@0
+      inputs:
+        versionSpec: '17'  
+      displayName: 'Install JDK'
+
+    - script: |
+        java -version
+        mvn -v
+      displayName: 'Verify Java and Maven Versions'
+
+    - script: |
+        mvn clean install -DskipTests
+      displayName: 'Build Spring Boot Application'
+
+    - script: |
+        mvn test
+      displayName: 'Run Tests'
